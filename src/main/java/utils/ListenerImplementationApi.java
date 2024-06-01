@@ -34,10 +34,8 @@ public class ListenerImplementationApi implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		try {
-			String screenshot = WebDriverUtitlity.getScreenShot(BaseClassUi.sdriver, methodName);
 			test.log(Status.FAIL, methodName+"-->Failed");
 			test.log(Status.FAIL, result.getThrowable());
-			test.addScreenCaptureFromPath(screenshot);
 			Reporter.log(methodName+"-->Failed");
 		} catch (Throwable e) {
 			e.printStackTrace();
