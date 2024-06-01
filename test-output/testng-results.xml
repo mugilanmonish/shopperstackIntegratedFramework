@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Before suite executed]]>
+    </line>
+    <line>
+      <![CDATA[--FIREFOX BROWSER LAUNCHED SUCCESSFULLY--]]>
+    </line>
+    <line>
+      <![CDATA[--LOGGED IN TO APPLICATION--]]>
+    </line>
+    <line>
+      <![CDATA[--LOGGED OUT THE APPLICATION--]]>
+    </line>
+    <line>
+      <![CDATA[--BROWSER CLOSED--]]>
+    </line>
+    <line>
+      <![CDATA[After suite Executed]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2024-06-01T14:52:43 IST" name="Default suite" finished-at="2024-06-01T14:53:23 IST" duration-ms="39408">
+    <groups>
+    </groups>
+    <test started-at="2024-06-01T14:52:43 IST" name="Default test" finished-at="2024-06-01T14:53:23 IST" duration-ms="39408">
+      <class name="frontend.VerifyFunctionalities">
+        <test-method is-config="true" signature="connectToDb()[pri:0, instance:frontend.VerifyFunctionalities@618b19ad]" started-at="2024-06-01T14:52:43 IST" name="connectToDb" finished-at="2024-06-01T14:52:43 IST" duration-ms="28" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Before suite executed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- connectToDb -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:frontend.VerifyFunctionalities@618b19ad]" started-at="2024-06-01T14:52:43 IST" name="launchBrowser" finished-at="2024-06-01T14:53:03 IST" duration-ms="19531" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[--FIREFOX BROWSER LAUNCHED SUCCESSFULLY--]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="login()[pri:0, instance:frontend.VerifyFunctionalities@618b19ad]" started-at="2024-06-01T14:53:03 IST" name="login" finished-at="2024-06-01T14:53:12 IST" duration-ms="8374" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[--LOGGED IN TO APPLICATION--]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="homePageContentTest()[pri:0, instance:frontend.VerifyFunctionalities@618b19ad]" started-at="2024-06-01T14:53:12 IST" name="homePageContentTest" finished-at="2024-06-01T14:53:18 IST" duration-ms="6148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageContentTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:frontend.VerifyFunctionalities@618b19ad]" started-at="2024-06-01T14:53:18 IST" name="logout" finished-at="2024-06-01T14:53:19 IST" duration-ms="1159" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[--LOGGED OUT THE APPLICATION--]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:frontend.VerifyFunctionalities@618b19ad]" started-at="2024-06-01T14:53:19 IST" name="closeBrowser" finished-at="2024-06-01T14:53:23 IST" duration-ms="3915" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[--BROWSER CLOSED--]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="closeDb()[pri:0, instance:frontend.VerifyFunctionalities@618b19ad]" started-at="2024-06-01T14:53:23 IST" name="closeDb" finished-at="2024-06-01T14:53:23 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[After suite Executed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeDb -->
+      </class> <!-- frontend.VerifyFunctionalities -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Tyss</groupId>
+  <artifactId>SST</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+    <dependencies>
+        <!-- Selenium -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.17.0</version>
+        </dependency>
+        <!-- RestAssured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.3.1</version>
+        </dependency>
+        <!-- Jackson Mapper-->
+        <dependency>
+  		    <groupId>org.codehaus.jackson</groupId>
+ 			<artifactId>jackson-mapper-asl</artifactId>
+    		<version>1.9.13</version>
+		</dependency>
+		<!-- Hamcrest-->
+		<dependency>
+    		<groupId>org.hamcrest</groupId>
+    		<artifactId>hamcrest</artifactId>
+    		<version>2.2</version>
+		</dependency>
+        <!-- TestNG -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.1</version>
+        </dependency>
+        <!-- ExtentReports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.9</version>
+        </dependency>
+        <!-- Commons-io-->
+        <dependency>
+		    <groupId>commons-io</groupId>
+    		<artifactId>commons-io</artifactId>
+		    <version>2.11.0</version>
+		</dependency>
+		<!-- Poi-->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>5.2.3</version>
+		</dependency>
+		<!-- Poi-ooxml -->
+		<dependency>
+    		<groupId>org.apache.poi</groupId>
+    		<artifactId>poi-ooxml</artifactId>
+    		<version>5.2.3</version>
+		</dependency>
+        <!-- lombok-->
+        <dependency>
+   			 <groupId>org.projectlombok</groupId>
+  			 <artifactId>lombok</artifactId>
+ 			 <version>1.18.20</version>
+  			 <scope>provided</scope>
+		</dependency>
+    </dependencies>
+    <profiles>
+		<profile>
+			<id>uitestId</id>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <suiteXmlFiles>
+						<suiteXmlFile>uisuit.xml</suiteXmlFile>
+					</suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    </profile>
+    	<profile>
+			<id>apitestId</id>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <suiteXmlFiles>
+						<suiteXmlFile>apisuit.xml</suiteXmlFile>
+					</suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    </profile>
+    </profiles>
+</project>
