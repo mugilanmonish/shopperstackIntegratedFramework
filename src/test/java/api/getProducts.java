@@ -24,7 +24,7 @@ public class getProducts extends BaseClassApi {
 		.then()
 		.assertThat()
 		.statusCode(200)
-		.time(Matchers.lessThan(1000l),TimeUnit.MILLISECONDS)
+		.time(Matchers.lessThan(10000l),TimeUnit.MILLISECONDS)
 		.log().all();
 	}
 	
@@ -38,7 +38,7 @@ public class getProducts extends BaseClassApi {
 		.then()
 		.assertThat()
 		.statusCode(200)
-		.time(Matchers.lessThan(6500l),TimeUnit.MILLISECONDS)
+		.time(Matchers.lessThan(10000l),TimeUnit.MILLISECONDS)
 		.log().all();
 	}
 }

@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="api.getProducts">
+      <class name="frontend.VerifyFunctionalities">
         <methods>
           <include name="logout"/>
-          <include name="login"/>
+          <include name="homePageContentTest"/>
           <include name="launchBrowser"/>
-          <include name="closeDb"/>
-          <include name="getAllProducts"/>
-          <include name="connectToDb"/>
           <include name="closeBrowser"/>
+          <include name="connectToDb"/>
+          <include name="login"/>
+          <include name="closeDb"/>
         </methods>
-      </class> <!-- api.getProducts -->
+      </class> <!-- frontend.VerifyFunctionalities -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
