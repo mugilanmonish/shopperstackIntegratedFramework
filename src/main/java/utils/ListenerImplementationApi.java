@@ -68,5 +68,4 @@ public class ListenerImplementationApi implements ITestListener {
 	public void onFinish(ITestContext context) {
 		reports.flush();
 	}
-	
 }

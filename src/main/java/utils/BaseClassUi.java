@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
@@ -14,7 +15,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
@@ -40,21 +42,22 @@ public class BaseClassUi {
 		Reporter.log("Before suite executed",true);
 	}
 	
+	@Parameters("browser")
+	
 	@BeforeClass(alwaysRun = true)
-	public void launchBrowser() throws Throwable {
-		String Browser = fUtils.readDataFromPropertyFile("browser");
+	public void launchBrowser(@Optional("firefox")String browser) throws Throwable {
 		String URL = fUtils.readDataFromPropertyFile("seleniumBaseUrl");
-		if(Browser.equalsIgnoreCase("chrome")) {
+		if(browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
 			Reporter.log("--CHROME BROWSER LAUNCHED SUCCESSFULLY--",true);
 		}
-		else if (Browser.equalsIgnoreCase("firefox")) {
+		else if (browser.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 			Reporter.log("--FIREFOX BROWSER LAUNCHED SUCCESSFULLY--",true);
 		}
-		else if(Browser.equalsIgnoreCase("edge")) {
+		else if(browser.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
-			Reporter.log("-- BROWSER LAUNCHED SUCCESSFULLY--",true);
+			Reporter.log("-- EDGE BROWSER LAUNCHED SUCCESSFULLY--",true);
 		}
 		else {
 			Reporter.log("--INVALID BROWSER--", true);
