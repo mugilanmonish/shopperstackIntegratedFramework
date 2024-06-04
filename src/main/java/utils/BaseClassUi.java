@@ -43,7 +43,6 @@ public class BaseClassUi {
 	}
 	
 	@Parameters("browser")
-	
 	@BeforeClass(alwaysRun = true)
 	public void launchBrowser(@Optional("firefox")String browser) throws Throwable {
 		String URL = fUtils.readDataFromPropertyFile("seleniumBaseUrl");

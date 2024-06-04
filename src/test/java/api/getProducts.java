@@ -17,7 +17,7 @@ public class getProducts extends BaseClassApi {
 	public void getAllProductsTest() {
 		given()
 		.spec(request)
-		.auth().oauth2("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6eGN2Ym4yQGdtYWlsLmNvbSBTSE9QUEVSIiwiZXhwIjoxNzE3MjY1NDA4LCJpYXQiOjE3MTcyMjk0MDh9.1X_zVLOEytF2yGBL59Mrc5LVM_pYrSTb_ZN_Byd28Ck")
+		.auth().oauth2("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6eGN2Ym4yQGdtYWlsLmNvbSBTSE9QUEVSIiwiZXhwIjoxNzE3NTIwNjUwLCJpYXQiOjE3MTc0ODQ2NTB9.qR_RDPGa27TL8STCL16YUukZp1Gh3BtuQThbfj6v-X0")
 		.queryParam("zoneId", "ALPHA")
 		.when()
 		.get(EndPointsLibrary.getProduct)
@@ -32,7 +32,7 @@ public class getProducts extends BaseClassApi {
 	public void getDefaultProductsTest() {
 		given()
 		.spec(request)
-		.auth().oauth2("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6eGN2Ym4yQGdtYWlsLmNvbSBTSE9QUEVSIiwiZXhwIjoxNzE3MjY1NDA4LCJpYXQiOjE3MTcyMjk0MDh9.1X_zVLOEytF2yGBL59Mrc5LVM_pYrSTb_ZN_Byd28Ck")
+		.auth().oauth2("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6eGN2Ym4yQGdtYWlsLmNvbSBTSE9QUEVSIiwiZXhwIjoxNzE3NTIwNjUwLCJpYXQiOjE3MTc0ODQ2NTB9.qR_RDPGa27TL8STCL16YUukZp1Gh3BtuQThbfj6v-X0")
 		.when()
 		.get(EndPointsLibrary.getAllProduct)
 		.then()
