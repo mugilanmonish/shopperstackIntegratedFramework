@@ -1,96 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Before suite executed]]>
-    </line>
-    <line>
-      <![CDATA[--FIREFOX BROWSER LAUNCHED SUCCESSFULLY--]]>
-    </line>
-    <line>
-      <![CDATA[--LOGGED IN TO APPLICATION--]]>
-    </line>
-    <line>
-      <![CDATA[Actual Execution starts from here]]>
-    </line>
-    <line>
-      <![CDATA[homePageContentTest-->Executed Successully]]>
-    </line>
-    <line>
-      <![CDATA[--LOGGED OUT THE APPLICATION--]]>
-    </line>
-    <line>
-      <![CDATA[--BROWSER CLOSED--]]>
+      <![CDATA[Api preconditions executed]]>
     </line>
     <line>
       <![CDATA[After suite Executed]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-06-02T23:52:35 IST" name="Suite" finished-at="2024-06-02T23:53:06 IST" duration-ms="30632">
+  <suite started-at="2024-06-06T09:52:52 IST" name="Default suite" finished-at="2024-06-06T09:53:01 IST" duration-ms="8766">
     <groups>
     </groups>
-    <test started-at="2024-06-02T23:52:35 IST" name="Test" finished-at="2024-06-02T23:53:06 IST" duration-ms="30632">
-      <class name="frontend.VerifyFunctionalities">
-        <test-method is-config="true" signature="connectToDb()[pri:0, instance:frontend.VerifyFunctionalities@765d7657]" started-at="2024-06-02T23:52:35 IST" name="connectToDb" finished-at="2024-06-02T23:52:35 IST" duration-ms="42" status="PASS">
+    <test started-at="2024-06-06T09:52:52 IST" name="Default test" finished-at="2024-06-06T09:53:01 IST" duration-ms="8766">
+      <class name="api.getProducts">
+        <test-method is-config="true" signature="connectToDbAndGenerateToken()[pri:0, instance:api.getProducts@7b98f307]" started-at="2024-06-06T09:52:49 IST" name="connectToDbAndGenerateToken" finished-at="2024-06-06T09:52:52 IST" duration-ms="3372" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Before suite executed]]>
+              <![CDATA[Api preconditions executed]]>
             </line>
           </reporter-output>
-        </test-method> <!-- connectToDb -->
-        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:frontend.VerifyFunctionalities@765d7657]" started-at="2024-06-02T23:52:36 IST" name="launchBrowser" finished-at="2024-06-02T23:52:49 IST" duration-ms="12621" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- connectToDbAndGenerateToken -->
+        <test-method signature="getAllProductsTest()[pri:0, instance:api.getProducts@7b98f307]" started-at="2024-06-06T09:52:52 IST" name="getAllProductsTest" finished-at="2024-06-06T09:53:01 IST" duration-ms="8654" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[--FIREFOX BROWSER LAUNCHED SUCCESSFULLY--]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="login()[pri:0, instance:frontend.VerifyFunctionalities@765d7657]" started-at="2024-06-02T23:52:49 IST" name="login" finished-at="2024-06-02T23:52:55 IST" duration-ms="6395" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[--LOGGED IN TO APPLICATION--]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="homePageContentTest()[pri:0, instance:frontend.VerifyFunctionalities@765d7657]" started-at="2024-06-02T23:52:55 IST" name="homePageContentTest" finished-at="2024-06-02T23:53:01 IST" duration-ms="6067" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Actual Execution starts from here]]>
-            </line>
-            <line>
-              <![CDATA[homePageContentTest-->Executed Successully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- homePageContentTest -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:frontend.VerifyFunctionalities@765d7657]" started-at="2024-06-02T23:53:01 IST" name="logout" finished-at="2024-06-02T23:53:02 IST" duration-ms="1142" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[--LOGGED OUT THE APPLICATION--]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:frontend.VerifyFunctionalities@765d7657]" started-at="2024-06-02T23:53:02 IST" name="closeBrowser" finished-at="2024-06-02T23:53:06 IST" duration-ms="3760" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[--BROWSER CLOSED--]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="closeDb()[pri:0, instance:frontend.VerifyFunctionalities@765d7657]" started-at="2024-06-02T23:53:07 IST" name="closeDb" finished-at="2024-06-02T23:53:07 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- getAllProductsTest -->
+        <test-method is-config="true" signature="closeDb()[pri:0, instance:api.getProducts@7b98f307]" started-at="2024-06-06T09:53:01 IST" name="closeDb" finished-at="2024-06-06T09:53:01 IST" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[After suite Executed]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeDb -->
-      </class> <!-- frontend.VerifyFunctionalities -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- api.getProducts -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

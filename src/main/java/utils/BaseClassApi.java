@@ -14,15 +14,22 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
 
+import groovyjarjarasm.asm.tree.TryCatchBlockNode;
 
+import static io.restassured.RestAssured.*;
+
+import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import objectrepository.HomePage;
 import objectrepository.LoginPage;
+import pojo.LoginPojo;
 public class BaseClassApi {
 	
 	public WebDriver driver;
@@ -33,13 +40,28 @@ public class BaseClassApi {
 	public JavaUtility jUtils = new JavaUtility();
 	public RequestSpecification request;
 	public ResponseSpecification response;
+	public String jwtToken ; 
 	
 	@BeforeSuite(alwaysRun = true)
-	public void connectToDb() throws SQLException {
+	public void connectToDbAndGenerateToken() throws Throwable {
 		request = new RequestSpecBuilder()
 				.setBaseUri(Iconstants.baseUri)
 				.setContentType(ContentType.JSON).build();
 		response = new ResponseSpecBuilder().expectContentType(ContentType.JSON).build();
+     		// token generator
+			System.out.println("TRY BLOCK");
+			LoginPojo lPojo = new LoginPojo("zxcvbn2@gmail.com", "Qwerty@123", "SHOPPER");
+			Response resp = given()
+			.spec(request)
+			.body(lPojo)
+			.when()
+			.post(EndPointsLibrary.shopperLogin);
+			resp.then()
+			.assertThat()
+			.statusCode(200);
+			String token = resp.jsonPath().get("data.jwtToken");
+			eUtils.writeDataIntoExcel("Sheet1",1, 0, token);
+			jwtToken = eUtils.readDataFromExcel("Sheet1", 1, 0);
 		Reporter.log("Api preconditions executed",true);
 	}
 	

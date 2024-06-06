@@ -3,6 +3,9 @@ package api;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import pojo.LoginPojo;
 import utils.BaseClassApi;
 import utils.EndPointsLibrary;
 
@@ -17,7 +20,7 @@ public class getProducts extends BaseClassApi {
 	public void getAllProductsTest() {
 		given()
 		.spec(request)
-		.auth().oauth2("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6eGN2Ym4yQGdtYWlsLmNvbSBTSE9QUEVSIiwiZXhwIjoxNzE3NTIwNjUwLCJpYXQiOjE3MTc0ODQ2NTB9.qR_RDPGa27TL8STCL16YUukZp1Gh3BtuQThbfj6v-X0")
+		.auth().oauth2(jwtToken)
 		.queryParam("zoneId", "ALPHA")
 		.when()
 		.get(EndPointsLibrary.getProduct)
@@ -32,7 +35,7 @@ public class getProducts extends BaseClassApi {
 	public void getDefaultProductsTest() {
 		given()
 		.spec(request)
-		.auth().oauth2("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6eGN2Ym4yQGdtYWlsLmNvbSBTSE9QUEVSIiwiZXhwIjoxNzE3NTIwNjUwLCJpYXQiOjE3MTc0ODQ2NTB9.qR_RDPGa27TL8STCL16YUukZp1Gh3BtuQThbfj6v-X0")
+		.auth().oauth2(jwtToken)
 		.when()
 		.get(EndPointsLibrary.getAllProduct)
 		.then()
