@@ -10,6 +10,9 @@ utils\BaseClassUi.class
 utils\EndPointsLibrary.class
 utils\ListenerImplementationApi.class
 utils\RestAssuredLibrary.class
+objectrepository\CartPage.class
+objectrepository\ProductPage23.class
+pojo\LoginPojo.class
 utils\IPathConstant.class
 objectrepository\HomePage.class
 objectrepository\LoginPage.class

@@ -90,6 +90,11 @@ public class WebDriverUtitlity {
 		js.executeScript("arguments[0].click()", element);
 	}
 	
+	public void srollToTopUsingJs() {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollTo(0,0)");
+	}
+	
 	public void scrollTillElementToBeVisible(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		Point loc = element.getLocation();
@@ -169,4 +174,13 @@ public class WebDriverUtitlity {
 			}
 		}
 	}	
+	
+	public String getCurrentPageTitle() {
+		return driver.getTitle();
+	}
+	
+	public void waitForTitleLoad(String actualTitle) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(0));
+		wait.until(ExpectedConditions.titleIs(actualTitle));
+	}
 }

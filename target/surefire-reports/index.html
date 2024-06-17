@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Mugilan\eclipse-workspace\SST\uibatchsuite.xml</span>
+                    <span>C:\Users\Mugilan\eclipse-workspace\SST\multilayersuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="frontend.VerifyFunctionalities" class="method navigator-link" hash-for-method="homePageContentTest">homePageContentTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="multiLayer.CartTest" class="method navigator-link" hash-for-method="VerifyTheAddedProductInApi">VerifyTheAddedProductInApi</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -121,14 +121,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">frontend.VerifyFunctionalities</span>
+              <span class="class-name">multiLayer.CartTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="homePageContentTest">
-                  </a> <!-- homePageContentTest -->
-                  <span class="method-name">homePageContentTest</span>
+                  <a name="VerifyTheAddedProductInApi">
+                  </a> <!-- VerifyTheAddedProductInApi -->
+                  <span class="method-name">VerifyTheAddedProductInApi</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +136,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Mugilan\eclipse-workspace\SST\uibatchsuite.xml</span>
+            <span class="header-content">C:\Users\Mugilan\eclipse-workspace\SST\multilayersuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,11 +144,11 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;utils.ListenerImplementationUi&quot;/&gt;
+    &lt;listener class-name=&quot;utils.ListenerImplementationApi&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;frontend.VerifyFunctionalities&quot;/&gt;
+      &lt;class name=&quot;multiLayer.CartTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -190,14 +190,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'homePageContentTest')
-data.setCell(0, 2, 'frontend.VerifyFunctionalities')
-data.setCell(0, 3, 7795);
+data.setCell(0, 1, 'VerifyTheAddedProductInApi')
+data.setCell(0, 2, 'multiLayer.CartTest')
+data.setCell(0, 3, 28170);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -209,10 +209,10 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">homePageContentTest</span>
+              <span class="reporter-method-name">VerifyTheAddedProductInApi</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Actual Execution starts from here</span>
-                <span class="reporter-method-output">homePageContentTest-->Executed Successully</span>
+                <span class="reporter-method-output">VerifyTheAddedProductInApi-->Executed Successully</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -230,34 +230,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">frontend.VerifyFunctionalities</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">multiLayer.CartTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">connectToDb</span>
+                <span class="method-name">connectToDbAndGenerateToken</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
-              <div class="configuration-class before">
-                <span class="method-name">launchBrowser(firefox)</span>
-                <span class="method-start">499 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">login</span>
-                <span class="method-start">19942 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">homePageContentTest</span>
-                <span class="method-start">38887 ms</span>
+                <span class="method-name">VerifyTheAddedProductInApi</span>
+                <span class="method-start">6379 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">logout</span>
-                <span class="method-start">46707 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">47559 ms</span>
-              </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">closeDb</span>
-                <span class="method-start">50753 ms</span>
+                <span class="method-start">35203 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

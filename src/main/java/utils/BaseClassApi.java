@@ -31,7 +31,7 @@ import objectrepository.HomePage;
 import objectrepository.LoginPage;
 import pojo.LoginPojo;
 public class BaseClassApi {
-	
+
 	public WebDriver driver;
 	public static WebDriver  sdriver;
 	public WebDriverUtitlity wUtils;
@@ -41,30 +41,26 @@ public class BaseClassApi {
 	public RequestSpecification request;
 	public ResponseSpecification response;
 	public String jwtToken ; 
-	
+
 	@BeforeSuite(alwaysRun = true)
 	public void connectToDbAndGenerateToken() throws Throwable {
 		request = new RequestSpecBuilder()
 				.setBaseUri(Iconstants.baseUri)
 				.setContentType(ContentType.JSON).build();
 		response = new ResponseSpecBuilder().expectContentType(ContentType.JSON).build();
-     		// token generator
-			System.out.println("TRY BLOCK");
-			LoginPojo lPojo = new LoginPojo("zxcvbn2@gmail.com", "Qwerty@123", "SHOPPER");
-			Response resp = given()
-			.spec(request)
-			.body(lPojo)
-			.when()
-			.post(EndPointsLibrary.shopperLogin);
-			resp.then()
-			.assertThat()
-			.statusCode(200);
-			String token = resp.jsonPath().get("data.jwtToken");
-			eUtils.writeDataIntoExcel("Sheet1",1, 0, token);
-			jwtToken = eUtils.readDataFromExcel("Sheet1", 1, 0);
-		Reporter.log("Api preconditions executed",true);
-	}
-	
+		// token generator
+		LoginPojo lPojo = new LoginPojo("zxcvbn2@gmail.com", "Qwerty@123", "SHOPPER");
+		Response resp = given()
+				.spec(request)
+				.body(lPojo)
+				.when()
+				.post(EndPointsLibrary.shopperLogin);
+		resp.then()
+		.assertThat()
+		.statusCode(200);
+		jwtToken = resp.jsonPath().get("data.jwtToken");
+		Reporter.log("Api preconditions and token generated",true);
+	}	
 	@AfterSuite(alwaysRun = true)
 	public void closeDb() throws SQLException {
 		Reporter.log("After suite Executed", true);

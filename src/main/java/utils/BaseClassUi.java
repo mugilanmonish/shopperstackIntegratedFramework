@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -44,7 +46,7 @@ public class BaseClassUi {
 	
 	@Parameters("browser")
 	@BeforeClass(alwaysRun = true)
-	public void launchBrowser(@Optional("firefox")String browser) throws Throwable {
+	public void launchBrowser(@Optional("chrome")String browser) throws Throwable {
 		String URL = fUtils.readDataFromPropertyFile("seleniumBaseUrl");
 		if(browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="api.getProducts">
+      <class name="multiLayer.CartTest">
         <methods>
           <include name="connectToDbAndGenerateToken"/>
-          <include name="getToken"/>
+          <include name="VerifyTheAddedProductInApi"/>
           <include name="closeDb"/>
         </methods>
-      </class> <!-- api.getProducts -->
+      </class> <!-- multiLayer.CartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
